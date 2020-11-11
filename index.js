@@ -23,7 +23,7 @@ fetch(
       const maxGDPValue = d3.max(dataset, (d) => d[1]); // sorting by date, which is the first value in each array
       const minGDPValue = d3.min(dataset, (d) => d[1]);
 
-      const padding = 40;
+      const padding = 100;
 
       var yearsDate = data.data.map((item) => {
         return new Date(item[0]);
@@ -79,7 +79,7 @@ fetch(
         .attr("y", (d) => {
           return svgHeight - d[1] / 30;
         })
-        .attr("fill", "#85bb65")
+        .attr("fill", "#1b262c")
         .attr("id", (d) => d[1])
         .on("mouseover", (d, i) => {
           tooltip.transition().duration(200).style("opacity", 0.9);
